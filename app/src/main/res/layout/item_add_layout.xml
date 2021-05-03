@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/input_item_icon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_android"
+        app:layout_constraintLeft_toLeftOf="@id/name_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Name:"
+        app:layout_constraintBottom_toTopOf="@id/input_item_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_item_icon"
+        tools:ignore="LabelFor" />
+
+
+    <EditText
+        android:id="@+id/input_item_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@id/creation_date_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_title"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/creation_date_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Date of Creation:"
+        app:layout_constraintBottom_toTopOf="@id/input_item_creation_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_item_name"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/input_item_creation_date"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/exp_date_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/creation_date_title"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/exp_date_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Date of Expiration:"
+        app:layout_constraintBottom_toTopOf="@id/input_item_exp_date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_item_creation_date"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/input_item_exp_date"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exp_date_title"
+        tools:ignore="LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/type_of_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/button_create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_item_exp_date">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/item_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/item_drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Drink" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/item_spice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spice" />
+
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:text="Create"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="@id/name_title"
+        app:layout_constraintTop_toBottomOf="@id/type_of_item"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="0dp"
+        android:text="Cancel"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="@id/name_title"
+        app:layout_constraintTop_toBottomOf="@id/type_of_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
